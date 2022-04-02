@@ -2,9 +2,9 @@ package practice.springframework.spring5webapp.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import practice.springframework.spring5webapp.domain.Author;
-import practice.springframework.spring5webapp.domain.Book;
-import practice.springframework.spring5webapp.domain.Publisher;
+import practice.springframework.spring5webapp.models.Author;
+import practice.springframework.spring5webapp.models.Book;
+import practice.springframework.spring5webapp.models.Publisher;
 import practice.springframework.spring5webapp.repositories.AuthorRepository;
 import practice.springframework.spring5webapp.repositories.BookRepository;
 import practice.springframework.spring5webapp.repositories.PublisherRepository;
@@ -34,7 +34,7 @@ public class BootStrapData implements CommandLineRunner {
         publisherRepository.save(publisher);
 
         Author eric = new Author("Eric", "Evans");
-        Book ddd = new Book("Domain Driven Design", "111111");
+        Book ddd = new Book("Domain Driven Design", "111111", publisher);
         eric.getBooks().add(ddd);
         ddd.getAuthors().add(eric);
 
@@ -46,7 +46,7 @@ public class BootStrapData implements CommandLineRunner {
         publisherRepository.save(publisher);
 
         Author rod = new Author("Rod", "Johnson");
-        Book noEJB = new Book("J2EE Development without EJB", "222222");
+        Book noEJB = new Book("J2EE Development without EJB", "222222", publisher);
         rod.getBooks().add(noEJB);
         noEJB.getAuthors().add(rod);
 

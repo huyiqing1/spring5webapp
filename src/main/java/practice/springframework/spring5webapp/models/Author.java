@@ -1,4 +1,4 @@
-package practice.springframework.spring5webapp.domain;
+package practice.springframework.spring5webapp.models;
 
 import javax.persistence.*;
 import java.util.HashSet;

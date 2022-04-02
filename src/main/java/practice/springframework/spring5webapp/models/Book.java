@@ -1,4 +1,4 @@
-package practice.springframework.spring5webapp.domain;
+package practice.springframework.spring5webapp.models;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -25,10 +25,18 @@ public class Book {
     public Book() {
     }
 
-    public Book(String title, String isbn/*, Set<Author> authors*/) {
+    public Book(String title, String isbn, Publisher publisher) {
         this.title = title;
         this.isbn = isbn;
-        //this.authors = authors;
+        this.publisher = publisher;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitle() {

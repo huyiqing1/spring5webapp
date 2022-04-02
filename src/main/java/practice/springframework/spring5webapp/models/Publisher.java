@@ -1,4 +1,4 @@
-package practice.springframework.spring5webapp.domain;
+package practice.springframework.spring5webapp.models;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -30,6 +30,14 @@ public class Publisher {
         this.city = city;
         this.state = state;
         this.zip = zip;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
